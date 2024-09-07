@@ -93,13 +93,13 @@ export function HeroThree() {
                 type="button"
                 className="rounded-md bg-[#190b1f] px-3 py-2 text-sm font-semibold text-[#fff] shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
-                View Docs
+                <a href="https://github.com/Turabali004">GitHub_Repo</a>
               </button>
               <button
                 type="button"
                 className="rounded-md border border-white px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
-                Get Started
+                Linkedin_Pro
               </button>
             </div>
           </div>
@@ -114,6 +114,8 @@ export function HeroThree() {
           </div>
         </div>
       </div>
+      
+      <hr className='h-px my-8 border-0 dark:bg-gray-600'/>
     </div>
   );
 }

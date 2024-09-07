@@ -3,7 +3,8 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 function Contact() {
   return (
-    <div className="max-w-[1000px] mx-auto my-20 py-20 px-10 text-black glass grid md:grid-cols-2 place-items-center">
+    <>
+    <div className="max-w-[1000px] mx-auto my-20 py-32 px-10 text-black glass grid md:grid-cols-2 place-items-center">
       <div className="">
         <ul className="my-auto  pr-6 ">
           <li className="flex gap-10 pb-10">
@@ -56,6 +57,8 @@ function Contact() {
         </button>
       </form>
     </div>
+    
+    </>
   );
 }
 

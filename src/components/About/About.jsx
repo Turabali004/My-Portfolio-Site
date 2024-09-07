@@ -9,12 +9,13 @@ import { SiTypescript } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { RiTailwindCssLine } from "react-icons/ri";
 
-import img1 from "../../assets/pic1.jpg";
-import img2 from "../../assets/pic2.jpg";
+import img1 from "../../assets/pic1.png"
+import img2 from "../../assets/pic2.png"
 import img3 from "../../assets/pic3.jpg";
 
 function About() {
   return (
+    <>
     <div className="max-w-[1400px] mx-auto py-32 px-6 grid md:grid-cols-2 gap-24  ">
       <div className="">
         <div className="w-full h-full bg-gradient-to-r from-teal-900 to-[#190b1f] rounded-lg group-hover:opacity-100 transition duration-300">
@@ -144,6 +145,8 @@ function About() {
 
 
     </div>
+    <hr className='h-px my-8 border-0 dark:bg-gray-400'/>
+      </>
   );
 }
 
