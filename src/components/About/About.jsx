@@ -146,6 +146,8 @@ function About() {
 
     </div>
     <hr className='h-px my-8 border-0 dark:bg-gray-400'/>
+
+    
       </>
   );
 }

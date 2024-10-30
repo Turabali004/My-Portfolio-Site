@@ -1,25 +1,59 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CiMenuBurger } from "react-icons/ci";
-import { GiCrossedSabres } from "react-icons/gi";
+import { GiCrossedSabres, GiDuffelBag } from "react-icons/gi";
 import { FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
-
+import { animate, motion, useScroll  } from "framer-motion";
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const { scrollYProgress } = useScroll();
+  // navbar items
+  const navItems = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Contact", link: "/contact" },
+    { name: "Services", link: "/services" },
+  ]
 
   const menuToggle = () => {
     setToggleMenu(!toggleMenu);
   };
+  const variants = {
+    visible: { opacity: 1, transition: { duration: 1,staggerChildren: .2 } },
+    hidden: { opacity: 0 },
+  }
+  const items = {
+    visible: {
+      opacity: 1, x: 0, transition: {
+        duration: 1, when: "beforeChildren",
+        staggerChildren: 0.3,
+      }
+    },
+    hidden: {
+      opacity: 0, x: -100, transition: {
+        when: "afterChildren",
+      },
+    },
+  }
+
+
 
   return (
     <nav className="w-full fixed top-0 left-0 bg-opacity-70 backdrop-blur-md z-50">
       <div className="max-w-[1300px] mx-auto text-white px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="">
-            <div className="text-2xl font-semibold">Turab.Ali</div>
+            <motion.div className="text-2xl font-semibold cursor-pointer" initial="hidden" animate="visible" whileHover={{scale:1.1}} variants={variants}>Turab.Ali</motion.div>
           </div>
-          <div className="hidden sm:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+
+
+          <motion.ul className="hidden sm:flex flex-wrap flex-row gap-4"
+            // initial={{opacity:0, x:-100}} animate={{opacity:1, x:0}} transition={{duration:1,}}
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+          >
+            {/* <div className="ml-10 flex items-baseline space-x-4">
               <Link to="/" className="hover:bg-gray-700 transition ease-in-out hover:-translate-y-1 duration-200 px-3 py-2 hover:scale-110 rounded-md text-sm font-medium">
                 Home
               </Link>
@@ -32,8 +66,15 @@ function Navbar() {
               <Link to="/services" className="hover:bg-gray-700 transition ease-in-out hover:-translate-y-1 duration-200 px-3 py-2 rounded-md text-sm font-medium">
                 Services
               </Link>
-            </div>
-          </div>
+            </div> */}
+            {navItems.map((item, index) => (
+              <motion.li to={item.link} key={index} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.5 }} variants={variants} className="hover:bg-gray-700 transition ease-in-out hover:-translate-y-1 duration-200 px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
+                {item.name}
+              </motion.li>
+            ))}
+          </motion.ul>
+
+
           <div className="-mr-2 flex sm:hidden">
             <button
               onClick={menuToggle}

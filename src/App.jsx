@@ -5,10 +5,12 @@ import Demo from "./components/Demo/Demo";
 import Project from "./components/Project/Project";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-// import CardCarousel from "./components/CardCarousel/CardCarousel";                              
-import ThemeButton from "./components/ThemeButton";
-import { ThemeProvider } from "./context/ThemeMode";
+// import CardCarousel from "./components/CardCarousel/CardCarousel";
 import { useEffect,useState } from "react";
+import { motion, useScroll } from "framer-motion";
+
+
+
 function App() {
   const [themeMode, setThemeMode] = useState('light')
   const lightMode = () => {
@@ -32,7 +34,7 @@ function App() {
 
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <HeroThree />
       {/* <CardCarousel/> */}
@@ -43,7 +45,7 @@ function App() {
       <Footer></Footer>
       
       {/* <Demo/> */}
-      </>
+      </div>
   );
 }
 
