@@ -78,12 +78,12 @@ const sliderVariants = {
 
 export function HeroThree() {
   return (
-    <div className="w-full relative rounded-lg shadow  dark:border-gray-700">
+    <div className="w-screen h-auto relative  rounded-lg shadow  dark:border-gray-700">
       <div className="  px-6 py-24 lg:px-8 ">
         <div className="relative mx-auto max-w-2xl py-24">
           {/* background effect */}
           <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
-            <svg
+            {/* <svg
               className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
               viewBox="0 0 1155 678"
               xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ export function HeroThree() {
                   <stop offset={1} stopColor="#FF80B5" />
                 </linearGradient>
               </defs>
-            </svg>
+            </svg> */}
           </div>
           {/* Main Text Effect */}
           <motion.div className="relative text-center" initial="hidden" animate="visible" variants={variants}>
@@ -183,8 +183,8 @@ export function HeroThree() {
         </div>
 
         {/* background-text */}
-        <motion.div className="w-full h-[40%] hidden md:flex absolute bottom-[-200px] overflow-hidden cursor-pointer">
-          <motion.h1 className="w-1/2 h-full py-16 font-bold text-4xl  tracking-tight sm:text-[300px] whitespace-nowrap text-[#ffffff09]" variants={sliderVariants} initial="initial" animate="animate" >
+        <motion.div className="w-full h-[40%] hidden md:flex absolute bottom-[-120px] overflow-hidden cursor-pointer">
+          <motion.h1 className="w-1/2 h-full py-24 font-bold text-4xl  tracking-tight sm:text-[300px] whitespace-nowrap text-[#ffffff09]" variants={sliderVariants} initial="initial" animate="animate" >
             Frontend designer & Shopify Expert
           </motion.h1>
         </motion.div>

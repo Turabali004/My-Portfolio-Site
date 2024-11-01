@@ -4,10 +4,12 @@ import About from "./components/About/About";
 import Demo from "./components/Demo/Demo";
 import Project from "./components/Project/Project";
 import Contact from "./components/Contact/Contact";
+import Parallex from "./components/Parallex/Parallex";
 import Footer from "./components/Footer/Footer";
 // import CardCarousel from "./components/CardCarousel/CardCarousel";
 import { useEffect,useState } from "react";
 import { motion, useScroll } from "framer-motion";
+import BioSection from "./components/BioSection/BioSection";
 
 
 
@@ -37,11 +39,15 @@ function App() {
     <div className="overflow-x-hidden">
       <Navbar />
       <HeroThree />
+      <Parallex type="services"/>
+      <Parallex type="portfolio"/>
+
       {/* <CardCarousel/> */}
       {/* <hr/> */}
       <About />
       <Project />
       <Contact></Contact>
+      {/* <BioSection/> */}
       <Footer></Footer>
       
       {/* <Demo/> */}
