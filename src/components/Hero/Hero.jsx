@@ -78,40 +78,14 @@ const sliderVariants = {
 
 export function HeroThree() {
   return (
-    <div className="w-screen h-auto relative  rounded-lg shadow  dark:border-gray-700">
-      <div className="  px-6 py-24 lg:px-8 ">
+    <div className="w-screen h-auto relative  rounded-lg shadow  dark:border-gray-700 z-50">
+      <div className="  px-6 pt-24 lg:px-8 flex justify-center">
         <div className="relative mx-auto max-w-2xl py-24">
-          {/* background effect */}
-          <div className="absolute inset-x-0 -top-[4rem] -z-10 transform-gpu overflow-hidden blur-3xl md:-top-[10rem]">
-            {/* <svg
-              className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
-              viewBox="0 0 1155 678"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-                fillOpacity=".3"
-                d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-              />
-              <defs>
-                <linearGradient
-                  id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-                  x1="1155.49"
-                  x2="-78.208"
-                  y1=".177"
-                  y2="474.645"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#9089FC" />
-                  <stop offset={1} stopColor="#FF80B5" />
-                </linearGradient>
-              </defs>
-            </svg> */}
-          </div>
+          
           {/* Main Text Effect */}
-          <motion.div className="relative text-center" initial="hidden" animate="visible" variants={variants}>
+          <motion.div className="relative text-left pt-24" initial="hidden" animate="visible" variants={variants}>
             <motion.h1 variants={variants} className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              <motion.div variants={variants}>
+              <motion.div className="leading-tight" variants={variants}>
                 <motion.span>Hey <motion.span >!</motion.span> </motion.span>
                 <br></br>
                 <motion.span className="cursor-pointer" variants={itemVariants}  >I'm Turab_<motion.span variants={variants} animate="otherIconsEffect">Ali</motion.span></motion.span>
@@ -141,7 +115,8 @@ export function HeroThree() {
               innovative frontend development. Empowering digital solutions with
               creativity and precision."
             </p>
-            <div className="w-full absolute mt-10 flex items-center justify-center gap-x-2">
+
+            <div className="w-full absolute mt-10 flex items-start justify-start gap-x-2">
               <button
                 type="button"
                 className="rounded-md bg-[#190b1f] px-3 py-2 text-sm font-semibold text-[#fff] shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
@@ -182,14 +157,20 @@ export function HeroThree() {
           </div>
         </div>
 
-        {/* background-text */}
-        <motion.div className="w-full h-[40%] hidden md:flex absolute bottom-[-120px] overflow-hidden cursor-pointer">
+        {/* hero-image */}
+        <motion.div className="div h-screen">
+        <img src="/public/hero.png" className="h-full" alt="" />
+        </motion.div>
+
+        
+
+      </div>
+      {/* background-text */}
+      <motion.div className="w-full h-[40%] hidden md:flex absolute bottom-[-120px] overflow-hidden cursor-pointer">
           <motion.h1 className="w-1/2 h-full py-24 font-bold text-4xl  tracking-tight sm:text-[300px] whitespace-nowrap text-[#ffffff09]" variants={sliderVariants} initial="initial" animate="animate" >
             Frontend designer & Shopify Expert
           </motion.h1>
         </motion.div>
-
-      </div>
 
       <hr className='h-px my-8 border-0 absolute dark:bg-gray-600' />
     </div>

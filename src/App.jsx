@@ -44,8 +44,8 @@ function App() {
 
       {/* <CardCarousel/> */}
       {/* <hr/> */}
-      <About />
       <Project />
+      <About />
       <Contact></Contact>
       {/* <BioSection/> */}
       <Footer></Footer>
