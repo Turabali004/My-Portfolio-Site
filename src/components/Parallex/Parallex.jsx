@@ -21,7 +21,7 @@ function Parallex({type}) {
     <div ref={ref} className='w-screen h-screen  relative flex justify-center items-center ' style={{background: type==="services" ? "linear-gradient(180deg, #111132, #0c0c1d)" :
         "linear-gradient(180deg, #111132, #0c0c1d)"
      }}>
-        <motion.h1 style={{y: yText}} className='text-7xl font-semibold'>{type === "services" ? "My-projects" : "My-Expertise"}</motion.h1>
+        <motion.h1 style={{y: yText}} className='text-7xl font-semibold'>{type === "projects" ? "My-projects" : "My-Expertise"}</motion.h1>
         <motion.div  className="absolute inset-0 z-30" style={{ backgroundImage: `url(${img1})`, backgroundSize: 'cover', backgroundPosition: 'center'}} />
         <motion.div  className="absolute inset-0 z-20" style={{ backgroundImage: `url(${img2})`, backgroundSize: 'cover', backgroundPosition: 'center'}} />
         <motion.div  className="absolute inset-0 z-10" style={{x: yBg, backgroundImage: `url(${img3})`, backgroundSize: 'cover', backgroundPosition: 'center'}} />

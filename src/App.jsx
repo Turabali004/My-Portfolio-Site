@@ -6,6 +6,7 @@ import Project from "./components/Project/Project";
 import Contact from "./components/Contact/Contact";
 import Parallex from "./components/Parallex/Parallex";
 import Footer from "./components/Footer/Footer";
+import Projects from "./components/Projects/Projects";
 // import CardCarousel from "./components/CardCarousel/CardCarousel";
 import { useEffect,useState } from "react";
 import { motion, useScroll } from "framer-motion";
@@ -39,7 +40,8 @@ function App() {
     <div className="overflow-x-hidden">
       <Navbar />
       <HeroThree />
-      <Parallex type="services"/>
+      <Parallex type="projects"/>
+
       <Parallex type="portfolio"/>
 
       {/* <CardCarousel/> */}
